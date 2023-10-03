@@ -33,12 +33,12 @@ export const Interface = () => {
 const AboutSection = () => {
 	return (
 		<Section>
-			<h1 className="text-6xl text-[#434a37] font-extrabold leading-snug">
+			<h1 className="text-6xl text-[#748b4b] font-extrabold leading-snug">
 				Hi, I'm
 				<br />
-				<span className="text-[#434a37] px-1 italic">Mubarak Odetunde</span>
+				<span className="text-[#354719] px-1 italic">Mubarak Odetunde</span>
 			</h1>
-			<p className="text-lg text-[#668238]">
+			<p className="text-lg text-[#748b4b]">
 				I love creating beautiful user experiences.
 			</p>
 			<button
@@ -68,25 +68,25 @@ const skills = [
 const SkillsSection = () => {
 	return (
 		<Section>
-			<div className="flex flex-row gap-11 mt-8">
+			<div className="text-[#748b4b] flex flex-row gap-11 mt-8">
 				<p>
 					Name:
 					<br />
-					<span className="text-xl">Mubarak</span>
+					<span className="text-xl font-semibold">Mubarak</span>
 				</p>
 				<p>
 					Age:
 					<br />
-					<span className="text-xl">19</span>
+					<span className="text-xl font-semibold">19</span>
 				</p>
 				<p>
 					From:
 					<br />
-					<span className="text-xl">Nigeria</span>
+					<span className="text-xl font-semibold">Nigeria</span>
 				</p>
 			</div>
-			<div className="mt-8">
-				<h2 className="text-3xl font-bold">Skills</h2>
+			<div className="mt-8 ">
+				<h2 className="text-3xl font-bold text-[#354719]">Skills</h2>
 				<div className="mt-2 space-y-4">
 					{skills.map((skill, index) => (
 						<div
@@ -121,12 +121,12 @@ const SkillsSection = () => {
 const ContactSection = () => {
 	return (
 		<Section>
-			<h2 className="text-5xl font-bold">Contact me</h2>
+			<h2 className="text-5xl font-bold text-[#354719]">Contact me</h2>
 			<div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
 				<form>
 					<label
 						for="name"
-						className="font-medium text-gray-500 block mb-1"
+						className="font-medium text-[#748b4b] block mb-1"
 					>
 						Name:
 					</label>
@@ -134,11 +134,11 @@ const ContactSection = () => {
 						type="text"
 						name="name"
 						id="name"
-						className="bg-gray-100 p-3 block w-full rounded-md border-0 text-gray-900 shadow-sm  focus:outline-gray-300 "
+						className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
 					/>
 					<label
 						for="email"
-						className="font-medium text-gray-500 block mb-1 mt-8"
+						className="font-medium text-[#748b4b] block mb-1 mt-8"
 					>
 						Email:
 					</label>
@@ -146,18 +146,18 @@ const ContactSection = () => {
 						type="email"
 						name="email"
 						id="email"
-						className="bg-gray-100 p-3 block w-full rounded-md border-0 text-gray-900 shadow-sm  focus:outline-gray-300 "
+						className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
 					/>
 					<label
 						for="email"
-						className="font-medium text-gray-500 block mb-1 mt-8"
+						className="font-medium text-[#748b4b] block mb-1 mt-8"
 					>
 						Message:
 					</label>
 					<textarea
 						name="message"
 						id="message"
-						className="bg-gray-100 p-5 h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm focus:outline-gray-300 "
+						className="bg-gray-100 p-5 h-32 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
 					/>
 					<button className="bg-[#71a71a] text-white mt-7 py-4 px-8 rounded-lg font-bold">
 						Submit
