@@ -14,19 +14,8 @@ function App() {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 2);
-	}, []);
-
-	const handleSectionChange = (newSection) => {
-		setIsLoading(false);
-
-		setTimeout(() => {
-			setIsLoading(false);
-			setSection(newSection);
-		}, 1000);
-	};
+		setMenuOpened(false);
+	}, [section]);
 
 	return (
 		<>
@@ -60,10 +49,7 @@ function App() {
 				</Canvas>
 			)}
 			<Menu
-				onSectionChange={(newSection) => {
-					setSection(newSection);
-					handleSectionChange(newSection);
-				}}
+				onSectionChange={setSection}
 				menuOpened={menuOpened}
 				setMenuOpened={setMenuOpened}
 			/>
