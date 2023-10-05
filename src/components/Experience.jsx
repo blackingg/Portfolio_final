@@ -30,9 +30,7 @@ export const Experience = (props) => {
 		<>
 			<OrbitControls />
 			<ambientLight intensity={1} />
-			<group>
-				<Avatar />
-			</group>
+
 			<motion.group
 				position={[10, 1, 1]}
 				scale={[0.18, 0.18, 0.18]}
