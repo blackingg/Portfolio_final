@@ -22,7 +22,7 @@ const Section = (props) => {
 
 export const Interface = () => {
 	return (
-		<div className="flex flex-col items-center w-screen ">
+		<div className="-ml-7 lg:ml-0 flex flex-col items-center w-screen ">
 			<HomeSection />
 			<AboutSection />
 

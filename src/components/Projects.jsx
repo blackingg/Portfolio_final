@@ -1,17 +1,13 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// import required modules
+import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-
 import { projects } from "../config";
-
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
+import "../index.css";
 
 export default function Projects() {
 	return (
@@ -31,21 +27,23 @@ export default function Projects() {
 				}}
 				navigation={true}
 				modules={[EffectCoverflow, Navigation]}
-				className="mySwiper p-10  lg:w-[56rem]"
+				className="mySwiper  md:p-20  lg:w-[56rem]"
 			>
 				{...projects.map((project, index) => (
 					<SwiperSlide
 						key={project}
 						className="lg:snap-center text-center lg:space-y-5 pt-5 pb-0 px-5 sm:h-screen lg:h-[30rem] bg-[#abb897]"
 					>
-						<h1 className="text-white text-6xl font-bold">{project.title}</h1>
+						<div className="text-white text-3xl lg:text-6xl font-bold">
+							{project.title}
+						</div>
 						<img
 							width={400}
 							className="self-center m-auto border-solid border-2 border-[#526635]"
 							src={project.image}
 						/>
 						<div className="space-y-[-30px] ">
-							<h4>{project.description}</h4>
+							<div>{project.description}</div>
 							<div className="space-x-4">
 								<a
 									href={project.demoUrl}
