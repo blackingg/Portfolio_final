@@ -2,10 +2,13 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { Interface } from "./components/Interface";
+import { MotionConfig } from "framer-motion";
 import { ScrollManager } from "./components/ScrollManager";
 import { useState, useEffect } from "react";
 import { Menu } from "./components/Menu";
+import { framerMotionConfig } from "./config";
 import { LoadingScreen } from "./components/LoadingScreen";
+import { Cursor } from "./components/Cursor";
 
 function App() {
 	const [section, setSection] = useState(0);
@@ -19,12 +22,14 @@ function App() {
 
 	return (
 		<>
-			{isLoading ? (
-				<LoadingScreen />
-			) : (
+			<MotionConfig
+				transition={{
+					...framerMotionConfig,
+				}}
+			>
 				<Canvas
 					shadows
-					camera={{ position: [3, 3, 3], fov: 30 }}
+					camera={{ position: [50, 80, 65] }}
 				>
 					<color
 						attach="background"
@@ -39,7 +44,10 @@ function App() {
 							onSectionChange={setSection}
 						/>
 						<Scroll>
-							<Experience />
+							<Experience
+								section={section}
+								menuOpened={menuOpened}
+							/>
 						</Scroll>
 
 						<Scroll html>
@@ -47,12 +55,14 @@ function App() {
 						</Scroll>
 					</ScrollControls>
 				</Canvas>
-			)}
-			<Menu
-				onSectionChange={setSection}
-				menuOpened={menuOpened}
-				setMenuOpened={setMenuOpened}
-			/>
+
+				<Menu
+					onSectionChange={setSection}
+					menuOpened={menuOpened}
+					setMenuOpened={setMenuOpened}
+				/>
+				<Cursor />
+			</MotionConfig>
 		</>
 	);
 }
