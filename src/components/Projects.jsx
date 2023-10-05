@@ -36,12 +36,12 @@ export default function Projects() {
 				{...projects.map((project, index) => (
 					<SwiperSlide
 						key={project}
-						className="snap-center text-center space-y-5 pt-5 pb-0 px-5 h-[30rem] bg-[#abb897]"
+						className="lg:snap-center text-center lg:space-y-5 pt-5 pb-0 px-5 sm:h-screen lg:h-[30rem] bg-[#abb897]"
 					>
 						<h1 className="text-white text-6xl font-bold">{project.title}</h1>
 						<img
 							width={400}
-							className="self-center m-auto"
+							className="self-center m-auto border-solid border-2 border-[#526635]"
 							src={project.image}
 						/>
 						<div className="space-y-[-30px] ">
