@@ -28,7 +28,6 @@ export const Experience = (props) => {
 	});
 	return (
 		<>
-			<OrbitControls />
 			<ambientLight intensity={1} />
 
 			<motion.group
