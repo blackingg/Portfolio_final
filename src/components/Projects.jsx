@@ -11,7 +11,7 @@ import "../index.css";
 
 export default function Projects() {
 	return (
-		<>
+		<div className="flex flex-col w-full h-full gap-8 items-center justify-center">
 			<h2 className="text-5xl font-bold text-[#354719]">Projects</h2>
 			<Swiper
 				effect={"coverflow"}
@@ -71,6 +71,6 @@ export default function Projects() {
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</>
+		</div>
 	);
 }
