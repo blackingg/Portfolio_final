@@ -13,8 +13,7 @@ import { Cursor } from "./components/Cursor";
 function App() {
 	const [section, setSection] = useState(0);
 	const [menuOpened, setMenuOpened] = useState(false);
-
-	const [isLoading, setIsLoading] = useState(true);
+	const [started, setStarted] = useState(false);
 
 	useEffect(() => {
 		setMenuOpened(false);
@@ -22,6 +21,10 @@ function App() {
 
 	return (
 		<>
+			<LoadingScreen
+				started={started}
+				setStarted={setStarted}
+			/>
 			<MotionConfig
 				transition={{
 					...framerMotionConfig,

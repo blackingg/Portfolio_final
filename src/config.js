@@ -30,7 +30,7 @@ export const projects = [
 		description: "Recreating the Atmos Awwwards website with React Three Fiber",
 	},
 	{
-		title: "Portfolio Baking",
+		title: "Photography Portfolio",
 		demoUrl: "",
 		gitUrl: "",
 		image: "img/Customize-Shirt.png",

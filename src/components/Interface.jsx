@@ -36,8 +36,8 @@ export const Interface = () => {
 
 const HomeSection = () => {
 	return (
-		<Section>
-			<h1 className="text-6xl text-[#748b4b]  font-extrabold leading-snug">
+		<Section mobileTop>
+			<h1 className="text-4xl md:text-6xl text-[#748b4b]  font-extrabold leading-snug">
 				Hi, I'm
 				<br />
 				<span className="text-[#4e6d1c] px-1 italic">Mubarak Odetunde</span>
@@ -75,15 +75,17 @@ const AboutSection = () => {
 				</p>
 			</div>
 			<div className="mt-8">
-				<h2 className="text-3xl font-bold text-[#354719]">Skills</h2>
+				<h2 className="text-3xl md:text-5xl font-bold text-[#354719]">
+					Skills
+				</h2>
 				<div className="mt-2 space-y-4">
 					{...skills.map((skill, index) => (
 						<div
-							className="w-64 "
+							className="w-64 md:w-96 "
 							key={index}
 						>
 							<motion.h3
-								className="text-xl font-bold text-gray-800"
+								className="text-lg md:text-xl font-bold text-gray-800"
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
 								transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
@@ -111,8 +113,10 @@ const AboutSection = () => {
 const ContactSection = () => {
 	return (
 		<Section>
-			<h2 className="text-5xl font-bold text-[#354719]">Contact me</h2>
-			<div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
+			<h2 className="text-3xl md:text-5xl font-bold text-[#354719]">
+				Contact me
+			</h2>
+			<div className="mt-8 p-8 rounded-md bg-white  w-96 max-w-full">
 				<form>
 					<label
 						for="name"

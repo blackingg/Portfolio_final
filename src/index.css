@@ -12,16 +12,3 @@ body {
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
 }
-
-/* projects.css */
-
-/* Mobile styles */
-@media screen and (max-width: 640px) {
-	.mySwiper {
-		width: 100%;
-	}
-
-	.swiper-slide {
-		padding: 20px;
-	}
-}
