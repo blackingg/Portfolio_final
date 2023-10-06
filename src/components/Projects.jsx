@@ -11,7 +11,7 @@ import "../index.css";
 
 export default function Projects() {
 	return (
-		<div className="flex flex-col w-full h-full gap-8 items-center justify-center">
+		<div className="flex flex-col w-5/6 lg:w-full h-full gap-8 ">
 			<h2 className="text-5xl font-bold text-[#354719]">Projects</h2>
 			<Swiper
 				effect={"coverflow"}
@@ -28,12 +28,12 @@ export default function Projects() {
 				}}
 				navigation={true}
 				modules={[EffectCoverflow, Navigation]}
-				className="w-full  md:p-20  lg:w-[56rem]"
+				className="w-full ml-7 md:ml-auto md:p-20  lg:w-[56rem]"
 			>
 				{...projects.map((project, index) => (
 					<SwiperSlide
 						key={project}
-						className="lg:snap-center text-center  lg:space-y-5 mt-20 lg:mt-0 pt-5 pb-10  px-5 sm:h-screen md:h-[23rem] lg:h-[30rem]  bg-[#abb897]"
+						className="lg:snap-center text-center  lg:space-y-5 mt-20 lg:mt-0 pt-5 md:pb-10  px-5 sm:h-screen md:h-[23rem] lg:h-[30rem]  bg-[#abb897]"
 					>
 						<div className="text-white text-3xl lg:text-6xl font-bold px-10">
 							{project.title}
@@ -43,7 +43,7 @@ export default function Projects() {
 							className="self-center m-auto border-solid border-2 border-[#526635]"
 							src={project.image}
 						/>
-						<div className="space-y-[-55px] lg:space-y-[-55px] ">
+						<div className="space-y-[-35px] lg:space-y-[-35px] pb-5">
 							<div>{project.description}</div>
 							<div className="space-x-4">
 								<a

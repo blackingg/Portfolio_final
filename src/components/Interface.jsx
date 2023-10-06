@@ -26,7 +26,10 @@ export const Interface = (props) => {
 		<div className="-ml-7 lg:ml-0 flex flex-col items-center w-screen ">
 			<HomeSection setSection={setSection} />
 			<AboutSection />
-			<Projects />
+			<Section>
+				<Projects />
+			</Section>
+
 			<ContactSection />
 		</div>
 	);
