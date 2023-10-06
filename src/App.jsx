@@ -4,7 +4,7 @@ import { Scroll, ScrollControls } from "@react-three/drei";
 import { Interface } from "./components/Interface";
 import { MotionConfig } from "framer-motion";
 import { ScrollManager } from "./components/ScrollManager";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { Menu } from "./components/Menu";
 import { framerMotionConfig } from "./config";
 import { LoadingScreen } from "./components/LoadingScreen";
@@ -57,7 +57,9 @@ function App() {
 							</Suspense>
 						</Scroll>
 
-						<Scroll html>{started && <Interface />}</Scroll>
+						<Scroll html>
+							{started && <Interface setSection={setSection} />}
+						</Scroll>
 					</ScrollControls>
 				</Canvas>
 
