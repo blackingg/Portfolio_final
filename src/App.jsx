@@ -47,15 +47,17 @@ function App() {
 							onSectionChange={setSection}
 						/>
 						<Scroll>
-							<Experience
-								section={section}
-								menuOpened={menuOpened}
-							/>
+							<Suspense>
+								{started && (
+									<Experience
+										section={section}
+										menuOpened={menuOpened}
+									/>
+								)}
+							</Suspense>
 						</Scroll>
 
-						<Scroll html>
-							<Interface />
-						</Scroll>
+						<Scroll html>{started && <Interface />}</Scroll>
 					</ScrollControls>
 				</Canvas>
 
