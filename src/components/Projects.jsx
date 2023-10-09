@@ -12,7 +12,9 @@ import "../index.css";
 export default function Projects() {
 	return (
 		<div className="flex flex-col w-5/6 lg:w-full h-full gap-8 ">
-			<h2 className="text-5xl font-bold text-[#354719]">Projects</h2>
+			<h2 className="text-4xl md:text-5xl font-bold text-[#354719]">
+				Projects
+			</h2>
 			<Swiper
 				effect={"coverflow"}
 				rewind={true}
