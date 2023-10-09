@@ -1,7 +1,17 @@
-import { LoadingScreen } from "./LoadingScreen";
+import { useState } from "react";
+
+import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
+import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
+
+import yourAudioFile from "../assets/audio.mp3";
 
 export const Menu = (props) => {
 	const { onSectionChange, menuOpened, setMenuOpened, isLoading } = props;
+	const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+
+	const handleAudioButtonClick = () => {
+		setIsAudioPlaying(!isAudioPlaying);
+	};
 	return (
 		<>
 			<button
@@ -48,7 +58,38 @@ export const Menu = (props) => {
 						/>
 					</>
 				</div>
+				<div className=" end-0 pb-10 text-xl flex items-start justify-center gap-6 cursor-pointer ">
+					<a
+						className="socials"
+						href="#"
+					>
+						<AiOutlineGithub className=" hover:text-[#436112] transition-colors" />
+					</a>
+					<a
+						className="socials"
+						href="#"
+					>
+						<AiFillLinkedin className=" hover:text-[#436112] transition-colors" />
+					</a>
+				</div>
 			</div>
+
+			<button
+				className={`z-20 fixed top-12 right-[6.5rem] p-3 w-11 h-11 rounded-md first-letterfirst-line text-white
+				${isAudioPlaying ? "bg-[#71a71a]  " : " bg-[#a8aaa5]"}
+				`}
+				onClick={handleAudioButtonClick}
+			>
+				{isAudioPlaying ? <HiSpeakerWave /> : <HiSpeakerXMark color="white" />}
+			</button>
+			{isAudioPlaying && (
+				<audio autoPlay>
+					<source
+						src={yourAudioFile}
+						type="audio/mp3"
+					/>
+				</audio>
+			)}
 		</>
 	);
 };

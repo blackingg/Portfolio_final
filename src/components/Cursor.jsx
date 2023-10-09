@@ -46,6 +46,7 @@ export const Cursor = () => {
 					e.target.tagName.toLowerCase() === "button" ||
 					// check parent is button
 					e.target.parentElement.tagName.toLowerCase() === "button" ||
+					e.target.className.toLowerCase() === "socials" ||
 					// check is input or textarea
 
 					e.target.tagName.toLowerCase() === "input" ||
@@ -65,7 +66,7 @@ export const Cursor = () => {
 	return (
 		<>
 			<div
-				className={`invisible md:visible -50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform
+				className={`invisible md:visible -50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform z-50
         ${
 					hoverButton
 						? "bg-transparent border-[3px] border-[#436112] w-7 h-7"
