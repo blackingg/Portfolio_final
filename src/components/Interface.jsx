@@ -39,14 +39,17 @@ const HomeSection = (props) => {
 	const { setSection } = props;
 	return (
 		<Section>
-			<h1 className="text-4xl md:text-6xl text-[#748b4b]  font-extrabold leading-snug">
-				Hi, I'm
-				<br />
-				<span className="text-[#4e6d1c] px-1 italic">Mubarak Odetunde</span>
-			</h1>
-			<p className="text-lg text-[#748b4b]">
-				I love creating beautiful user experiences.
-			</p>
+			<div className="bg-[#c7d6ae] p-1">
+				<h1 className=" text-4xl md:text-6xl text-[#748b4b]  font-extrabold leading-snug">
+					Hi, I'm
+					<br />
+					<span className="text-[#4e6d1c] px-1 italic">Mubarak Odetunde</span>
+				</h1>
+				<p className=" text-lg text-[#748b4b]">
+					I love creating beautiful user experiences.
+				</p>
+			</div>
+
 			<button
 				onClick={() => {
 					console.log("help");
