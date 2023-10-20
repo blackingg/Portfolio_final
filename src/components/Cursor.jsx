@@ -40,7 +40,7 @@ export const Cursor = () => {
 
 	useEffect(() => {
 		const mouseEventListener = document.addEventListener(
-			"mouseover",
+			"mousemove",
 			function (e) {
 				if (
 					e.target.tagName.toLowerCase() === "button" ||
@@ -59,7 +59,7 @@ export const Cursor = () => {
 			}
 		);
 		return () => {
-			document.removeEventListener("mouseover", mouseEventListener);
+			document.removeEventListener("mousemove", mouseEventListener);
 		};
 	}, []);
 
