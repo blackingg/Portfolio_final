@@ -39,7 +39,7 @@ const HomeSection = (props) => {
 	const { setSection } = props;
 	return (
 		<Section>
-			<div className="bg-[#859174] p-1 rounded-sm bg-opacity-70">
+			<div className="bg-white p-2 rounded-sm bg-opacity-70">
 				<h1 className=" text-4xl md:text-6xl text-[#748b4b]  font-extrabold leading-snug">
 					Hi, I'm
 					<br />
