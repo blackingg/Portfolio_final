@@ -30,11 +30,11 @@ export const projects = [
 		description: "Recreating the Atmos Awwwards website with React Three Fiber",
 	},
 	{
-		title: "Photography Gallery",
-		demoUrl: "",
+		title: "Pokedex",
+		demoUrl: "https://pokedex-blackingg.netlify.app/",
 		gitUrl: "",
-		image: "img/Customize-Shirt.png",
-		description: "Learn how to bake a 3D model with Blender and use it in r3f",
+		image: "img/Pokedex.png",
+		description: "A Pokedex website",
 	},
 	{
 		title: "3D Avatar",
