@@ -53,7 +53,10 @@ export default function Projects() {
 									target="_blank"
 								>
 									<button
-										className={`bg-[#768560] hover:bg-[#526635]  py-4 px-8 rounded-lg font-bold text-lg mt-16 `}
+										className={`bg-[#6d8a41] hover:bg-[#394b1e] py-4 px-8 rounded-lg font-bold text-lg mt-16 ${
+											!project.demoUrl ? "cursor-not-allowed" : ""
+										}`}
+										disabled={!project.demoUrl}
 									>
 										<AiOutlineLink color="white" />
 									</button>
@@ -63,7 +66,10 @@ export default function Projects() {
 									target="_blank"
 								>
 									<button
-										className={`bg-[#6d8a41] hover:bg-[#394b1e]  py-4 px-8 rounded-lg font-bold text-lg mt-16 `}
+										className={`bg-[#6d8a41] hover:bg-[#394b1e] py-4 px-8 rounded-lg font-bold text-lg mt-16 ${
+											!project.gitUrl ? "cursor-not-allowed" : ""
+										}`}
+										disabled={!project.gitUrl}
 									>
 										<AiFillGithub color="white" />
 									</button>
