@@ -25,7 +25,7 @@ export const projects = [
 	{
 		title: "Customize a Shirt",
 		demoUrl: "https://customize-shirt.netlify.app/",
-		gitUrl: "",
+		gitUrl: "https://github.com/blackingg/threejs",
 		image: "img/Customize-Shirt.png",
 		description: "Recreating the Atmos Awwwards website with React Three Fiber",
 	},
