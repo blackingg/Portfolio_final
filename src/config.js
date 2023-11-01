@@ -37,24 +37,10 @@ export const projects = [
 		description: "A Pokedex website",
 	},
 	{
-		title: "3D Avatar",
-		demoUrl: "",
-		gitUrl: "",
-		image: "img/Customize-Shirt.png",
-		description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
-	},
-	{
 		title: "Kanagame",
 		demoUrl: "",
 		gitUrl: "",
 		image: "img/Customize-Shirt.png",
-		description: "Use React Three Fiber to create a 3D game",
-	},
-	{
-		title: "Loader",
-		demoUrl: "",
-		gitUrl: "",
-		image: "img/Customize-Shirt.png",
-		description: "Create a loading screen for your r3f projects",
+		description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
 	},
 ];
