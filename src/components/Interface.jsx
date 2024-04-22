@@ -66,7 +66,11 @@ const HomeSection = (props) => {
 const AboutSection = () => {
   return (
     <Section>
-      <motion.div whileInView={"visible"}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: "spring", stiffness: 80 }}
+      >
         <div className="text-[#748b4b] flex flex-row gap-11 mt-8">
           <p>
             Name:
@@ -125,69 +129,75 @@ const ContactSection = () => {
   const [state, handleSubmit] = useForm("xdorpbvr");
 
   return (
-    <Section className="mt-8">
-      <h2 className="text-3xl md:text-5xl font-bold text-[#354719]">
-        Contact me
-      </h2>
-      <div className="mt-8 p-8 rounded-md bg-white  w-96 max-w-full">
-        {state.succeeded ? (
-          <p className="text-[#748b4b] text-center">
-            Thank you for contacting me!
-          </p>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <label
-              for="name"
-              className="font-medium text-[#748b4b] block mb-1"
-            >
-              Name:
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
-            />
-            <label
-              for="email"
-              className="font-medium text-[#748b4b] block mb-1 mt-8"
-            >
-              Email:
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
-            />
-            <ValidationError
-              className="absolute mt-1 text-red-500"
-              errors={state.errors}
-            />
-            <label
-              for="email"
-              className="font-medium text-[#748b4b] block mb-1 mt-10"
-            >
-              Message:
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="bg-gray-100 p-5 h-32 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
-            />
-            <ValidationError
-              className="absolute mt-1 text-red-500"
-              errors={state.errors}
-            />
-            <button
-              disabled={state.submitting}
-              className="bg-[#71a71a] text-white py-4 px-8 rounded-lg font-bold text-lg mt-16"
-            >
-              Submit
-            </button>
-          </form>
-        )}
-      </div>
+    <Section>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: "spring", stiffness: 80 }}
+      >
+        <h2 className="pt-10 text-3xl md:text-5xl font-bold text-[#354719]">
+          Contact me
+        </h2>
+        <div className="mt-8 p-8 rounded-md bg-white  w-96 max-w-full">
+          {state.succeeded ? (
+            <p className="text-[#748b4b] text-center">
+              Thank you for contacting me!
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <label
+                for="name"
+                className="font-medium text-[#748b4b] block mb-1"
+              >
+                Name:
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
+              />
+              <label
+                for="email"
+                className="font-medium text-[#748b4b] block mb-1 mt-8"
+              >
+                Email:
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
+              />
+              <ValidationError
+                className="absolute mt-1 text-red-500"
+                errors={state.errors}
+              />
+              <label
+                for="email"
+                className="font-medium text-[#748b4b] block mb-1 mt-10"
+              >
+                Message:
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                className="bg-gray-100 p-5 h-32 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
+              />
+              <ValidationError
+                className="absolute mt-1 text-red-500"
+                errors={state.errors}
+              />
+              <button
+                disabled={state.submitting}
+                className="bg-[#71a71a] text-white py-4 px-8 rounded-lg font-bold text-lg mt-16"
+              >
+                Submit
+              </button>
+            </form>
+          )}
+        </div>
+      </motion.div>
     </Section>
   );
 };

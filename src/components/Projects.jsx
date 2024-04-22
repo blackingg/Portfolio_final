@@ -9,9 +9,16 @@ import { projects } from "../config";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 import "../index.css";
 
+import { motion } from "framer-motion";
+
 export default function Projects() {
   return (
-    <div className="flex flex-col w-5/6 lg:w-full h-full gap-8 ">
+    <motion.div
+      className="flex flex-col w-5/6 lg:w-full h-full gap-8 "
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring", stiffness: 80 }}
+    >
       <h2 className="text-4xl md:text-5xl font-bold text-[#354719]">
         Projects
       </h2>
@@ -35,7 +42,7 @@ export default function Projects() {
         {...projects.map((project, index) => (
           <SwiperSlide
             key={project}
-            className="lg:snap-center text-center  lg:space-y-5 mt-20 lg:mt-0 pt-5 md:pb-10  px-5 sm:h-screen md:h-[23rem] lg:h-[30rem]  bg-[#abb897]"
+            className="lg:snap-center text-center  lg:space-y-5 mt-5 lg:mt-0 pt-5 md:pb-10  px-5 sm:h-screen md:h-[23rem] lg:h-[30rem]  bg-[#abb897]"
           >
             <div className="text-white text-3xl lg:text-6xl font-bold px-10">
               {project.title}
@@ -79,6 +86,6 @@ export default function Projects() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 }
