@@ -23,6 +23,7 @@ export const skills = [
 
 export const projects = [
   {
+    index: 1,
     title: "Customize a Shirt",
     demoUrl: "https://customize-shirt.netlify.app/",
     gitUrl: "https://github.com/blackingg/threejs",
@@ -30,6 +31,7 @@ export const projects = [
     description: "Recreating the Atmos Awwwards website with React Three Fiber",
   },
   {
+    index: 2,
     title: "Pokedex",
     demoUrl: "https://pokedex-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/pokemon_app",
@@ -37,10 +39,11 @@ export const projects = [
     description: "A Pokedex website",
   },
   {
-    title: "Kanagame",
-    demoUrl: "",
-    gitUrl: "",
-    image: "img/Customize-Shirt.png",
-    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
+    index: 3,
+    title: "Particle Canvas",
+    demoUrl: "https://particleeffect-blackingg.netlify.app/",
+    gitUrl: "https://github.com/blackingg/CanvasParticles",
+    image: "img/particleCanvas.png",
+    description: "A little sideproject to show a particle effect",
   },
 ];

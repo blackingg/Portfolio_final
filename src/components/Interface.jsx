@@ -159,7 +159,7 @@ const ContactSection = () => {
               />
               <label
                 for="email"
-                className="font-medium text-[#748b4b] block mb-1 mt-8"
+                className="font-medium text-[#748b4b] block mb-1 mt-3"
               >
                 Email:
               </label>
@@ -175,14 +175,14 @@ const ContactSection = () => {
               />
               <label
                 for="email"
-                className="font-medium text-[#748b4b] block mb-1 mt-10"
+                className="font-medium text-[#748b4b] block mb-1 mt-8"
               >
                 Message:
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="bg-gray-100 p-5 h-32 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
+                className="bg-gray-100 p-5 h-28 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
               />
               <ValidationError
                 className="absolute mt-1 text-red-500"
@@ -190,7 +190,7 @@ const ContactSection = () => {
               />
               <button
                 disabled={state.submitting}
-                className="bg-[#71a71a] text-white py-4 px-8 rounded-lg font-bold text-lg mt-16"
+                className="bg-[#71a71a] text-white py-4 px-8 rounded-lg font-bold text-lg mt-8"
               >
                 Submit
               </button>
