@@ -28,7 +28,7 @@ export const projects = [
     demoUrl: "https://customize-shirt.netlify.app/",
     gitUrl: "https://github.com/blackingg/threejs",
     image: "img/Customize-Shirt.png",
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
+    description: "A 3d shirt customizing webapp",
   },
   {
     index: 2,
@@ -40,6 +40,15 @@ export const projects = [
   },
   {
     index: 3,
+    title: "A Pizza website",
+    demoUrl: "https://pizzahut-blackingg.netlify.app/",
+    gitUrl: "https://github.com/blackingg/resturant_webapp",
+    image: "img/pizzaSite.png",
+    description:
+      "A little side project to for a Pizza resturant website (still in development). The pizza on the home page is a 3d model that responds to mouse movement, when finally completed there would be a 3d interactive pizza building game at the resturant bit",
+  },
+  {
+    index: 4,
     title: "Particle Canvas",
     demoUrl: "https://particleeffect-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/CanvasParticles",
