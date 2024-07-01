@@ -45,7 +45,7 @@ export const projects = [
     gitUrl: "https://github.com/blackingg/resturant_webapp",
     image: "img/pizzaSite.png",
     description:
-      "A little side project to for a Pizza resturant website (still in development). The pizza on the home page is a 3d model that responds to mouse movement, when finally completed there would be a 3d interactive pizza building game at the resturant bit",
+      "A little side project to for a Pizza resturant website (still in development).",
   },
   {
     index: 4,
