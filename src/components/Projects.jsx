@@ -26,7 +26,7 @@ export default function Projects() {
         effect={"coverflow"}
         rewind={true}
         slidesPerView={1}
-        spaceBetween={10}
+        spaceBetween={5}
         loop={false}
         coverflowEffect={{
           rotate: 50,
@@ -37,7 +37,7 @@ export default function Projects() {
         }}
         navigation={true}
         modules={[EffectCoverflow, Navigation]}
-        className="w-full ml-7 md:ml-auto md:p-20 lg:py-20 lg:px-02 lg:w-[56rem]"
+        className="w-full ml-7 md:ml-auto md:p-20 lg:py-2 lg:px-24 lg:w-[56rem]"
       >
         {...projects.map((project, index) => (
           <SwiperSlide
