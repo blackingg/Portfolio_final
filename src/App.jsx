@@ -11,67 +11,67 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Cursor } from "./components/Cursor";
 
 function App() {
-	const [section, setSection] = useState(0);
-	const [menuOpened, setMenuOpened] = useState(false);
-	const [started, setStarted] = useState(false);
+  const [section, setSection] = useState(0);
+  const [menuOpened, setMenuOpened] = useState(false);
+  const [started, setStarted] = useState(false);
 
-	useEffect(() => {
-		setMenuOpened(false);
-	}, [section]);
+  useEffect(() => {
+    setMenuOpened(false);
+  }, [section]);
 
-	return (
-		<>
-			<LoadingScreen
-				started={started}
-				setStarted={setStarted}
-			/>
-			<MotionConfig
-				transition={{
-					...framerMotionConfig,
-				}}
-			>
-				<Canvas
-					shadows
-					camera={{ position: [50, 80, 65] }}
-				>
-					<color
-						attach="background"
-						args={["#e7f7cd"]}
-					/>
-					<ScrollControls
-						pages={4}
-						damping={0.1}
-					>
-						<ScrollManager
-							section={section}
-							onSectionChange={setSection}
-						/>
-						<Scroll>
-							<Suspense>
-								{started && (
-									<Experience
-										section={section}
-										menuOpened={menuOpened}
-									/>
-								)}
-							</Suspense>
-						</Scroll>
+  return (
+    <>
+      <LoadingScreen
+        started={started}
+        setStarted={setStarted}
+      />
+      <MotionConfig
+        transition={{
+          ...framerMotionConfig,
+        }}
+      >
+        <Canvas
+          shadows
+          camera={{ position: [50, 80, 65] }}
+        >
+          <color
+            attach="background"
+            args={["#e7f7cd"]}
+          />
+          <ScrollControls
+            pages={4.23}
+            damping={0.1}
+          >
+            <ScrollManager
+              section={section}
+              onSectionChange={setSection}
+            />
+            <Scroll>
+              <Suspense>
+                {started && (
+                  <Experience
+                    section={section}
+                    menuOpened={menuOpened}
+                  />
+                )}
+              </Suspense>
+            </Scroll>
 
-						<Scroll html>
-							{started && <Interface setSection={setSection} />}
-						</Scroll>
-					</ScrollControls>
-				</Canvas>
+            <Scroll html>
+              {started && <Interface setSection={setSection} />}
+            </Scroll>
+          </ScrollControls>
+        </Canvas>
 
-				<Menu
-					onSectionChange={setSection}
-					menuOpened={menuOpened}
-					setMenuOpened={setMenuOpened}
-				/>
-				<Cursor />
-			</MotionConfig>
-		</>
-	);
+        <Menu
+          onSectionChange={setSection}
+          menuOpened={menuOpened}
+          setMenuOpened={setMenuOpened}
+        />
+        <Cursor />
+      </MotionConfig>
+    </>
+  );
 }
 
 export default App;

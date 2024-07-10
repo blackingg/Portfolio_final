@@ -56,3 +56,47 @@ export const projects = [
     description: "A little sideproject to show a particle effect",
   },
 ];
+
+export const comments = [
+  {
+    index: 1,
+    name: "John Doe",
+    body: "The new design is really sleek and user-friendly!",
+  },
+  {
+    index: 2,
+    name: "Jane Smith",
+    body: "I love how responsive the website is on all my devices.",
+  },
+  {
+    index: 3,
+    name: "Web Guru",
+    body: "Your code is clean and well-structured. Great job!",
+  },
+  {
+    index: 4,
+    name: "Alex Johnson",
+    body: "The performance improvements are noticeable. The site loads much faster now.",
+  },
+  {
+    index: 5,
+    name: "Sam Lee",
+    body: "The color scheme and typography are perfect. Great attention to detail!",
+  },
+  {
+    index: 6,
+    name: "Chris Walker",
+    body: "The new features are amazing! Keep up the great work.",
+  },
+  {
+    index: 7,
+    name: "Jordan Brown",
+    body: "I appreciate the use of modern technologies and frameworks.",
+  },
+  {
+    index: 8,
+    username: "frontend_fan",
+    name: "Pat Taylor",
+    body: "The animations and transitions are smooth and add a nice touch.",
+  },
+];

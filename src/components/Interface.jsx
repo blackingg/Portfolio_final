@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { skills } from "../config";
+import { skills, comments } from "../config";
 import Projects from "./Projects";
 import { useForm, ValidationError } from "@formspree/react";
+import Marquee from "react-fast-marquee";
 
 const Section = (props) => {
   const { children } = props;
@@ -26,11 +27,13 @@ export const Interface = (props) => {
     <div className="-ml-7 lg:ml-0 flex flex-col items-center w-screen ">
       <HomeSection setSection={setSection} />
       <AboutSection />
+
       <Section>
         <Projects />
       </Section>
 
       <ContactSection />
+      <CommentSection />
     </div>
   );
 };
@@ -199,5 +202,35 @@ const ContactSection = () => {
         </div>
       </motion.div>
     </Section>
+  );
+};
+
+const CommentSection = () => {
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: "spring", stiffness: 80 }}
+      >
+        <div className="h-fit w-screen flex  mx-5 p-8 ">
+          <Marquee>
+            {comments.map((comment, index) => (
+              <div
+                className="h-auto w-64 md:w-96 p-3"
+                key={index}
+              >
+                <div className="h-[4rem] w-full bg-white p-2">
+                  <h3 className="text-xs text-[#748b4b] font-bold0">
+                    {comment.name}
+                  </h3>
+                  <h4 className="text-xs text-gray-80">{comment.body}</h4>
+                </div>
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </motion.div>
+    </>
   );
 };
