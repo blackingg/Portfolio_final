@@ -3,6 +3,7 @@ import { skills, comments } from "../config";
 import Projects from "./Projects";
 import { useForm, ValidationError } from "@formspree/react";
 import Marquee from "react-fast-marquee";
+import myPic from "/me.jpg";
 
 const Section = (props) => {
   const { children } = props;
@@ -141,64 +142,73 @@ const ContactSection = () => {
         <h2 className="pt-10 text-3xl md:text-5xl font-bold text-[#354719]">
           Contact me
         </h2>
-        <div className="mt-8 p-8 rounded-md bg-white  w-96 max-w-full">
-          {state.succeeded ? (
-            <p className="text-[#748b4b] text-center">
-              Thank you for contacting me!
-            </p>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <label
-                for="name"
-                className="font-medium text-[#748b4b] block mb-1"
-              >
-                Name:
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
-              />
-              <label
-                for="email"
-                className="font-medium text-[#748b4b] block mb-1 mt-3"
-              >
-                Email:
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
-              />
-              <ValidationError
-                className="absolute mt-1 text-red-500"
-                errors={state.errors}
-              />
-              <label
-                for="email"
-                className="font-medium text-[#748b4b] block mb-1 mt-8"
-              >
-                Message:
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="bg-gray-100 p-5 h-28 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
-              />
-              <ValidationError
-                className="absolute mt-1 text-red-500"
-                errors={state.errors}
-              />
-              <button
-                disabled={state.submitting}
-                className="bg-[#71a71a] text-white py-4 px-8 rounded-lg font-bold text-lg mt-8"
-              >
-                Submit
-              </button>
-            </form>
-          )}
+        <div className="w-screen flex flex-row justify-between">
+          <div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
+            {state.succeeded ? (
+              <p className="text-[#748b4b] text-center">
+                Thank you for contacting me!
+              </p>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <label
+                  for="name"
+                  className="font-medium text-[#748b4b] block mb-1"
+                >
+                  Name:
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
+                />
+                <label
+                  for="email"
+                  className="font-medium text-[#748b4b] block mb-1 mt-3"
+                >
+                  Email:
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
+                />
+                <ValidationError
+                  className="absolute mt-1 text-red-500"
+                  errors={state.errors}
+                />
+                <label
+                  for="email"
+                  className="font-medium text-[#748b4b] block mb-1 mt-8"
+                >
+                  Message:
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  className="bg-gray-100 p-5 h-28 block w-full rounded-md border-0 text-[#354719] shadow-sm focus:outline-gray-300 "
+                />
+                <ValidationError
+                  className="absolute mt-1 text-red-500"
+                  errors={state.errors}
+                />
+                <button
+                  disabled={state.submitting}
+                  className="bg-[#71a71a] text-white py-4 px-8 rounded-lg font-bold text-lg mt-8"
+                >
+                  Submit
+                </button>
+              </form>
+            )}
+          </div>
+          <div className="w-[35rem] h-[35rem] mr-20 pr-20 hidden md:block lg:block">
+            <img
+              src={myPic}
+              lt="Mubarak Odetunde"
+              className="w-full h-full rounded-md"
+            />
+          </div>
         </div>
       </motion.div>
     </Section>

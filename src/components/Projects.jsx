@@ -16,7 +16,7 @@ export default function Projects() {
     <>
       <h2 className="text-4xl md:text-5xl font-bold text-[#354719] mt-8">
         Projects
-      </h2>{" "}
+      </h2>
       <motion.div
         className="flex flex-col items-center w-screen h-screen gap-8"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -39,54 +39,51 @@ export default function Projects() {
             }}
             navigation={true}
             modules={[EffectCoverflow, Navigation]}
-            className="w-full lg:w-[56rem] px-7 md:px-20 lg:px-24"
+            className="w-full lg:w-[70%] px-7 md:px-20 lg:px-24"
           >
             {projects.map((project, index) => (
               <SwiperSlide
                 key={project.title}
-                className="flex flex-col items-center justify-center text-center lg:space-y-5 mt-5 lg:mt-0 pt-5 md:pb-10 px-5 sm:h-screen md:h-[23rem] lg:h-[32rem] bg-[#abb897]"
+                className="flex flex-col items-center justify-center text-center lg:space-y-1 mt-5 lg:mt-0 pt-5 md:pb-10 px-5 sm:h-screen md:h-[23rem] lg:h-[80%] bg-[#abb897]"
               >
-                <div className="text-white text-3xl lg:text-6xl font-bold px-10">
+                <div className="text-white text-3xl lg:text-6xl font-bold px-10 pb-3">
                   {project.title}
                 </div>
                 <img
-                  width={400}
-                  className="self-center m-auto border-solid border-2 border-[#526635]"
+                  className="self-center m-auto border-solid border-2 border-[#526635] w-[70%]"
                   src={project.image}
                   alt={project.title}
-                />
-                <div>
-                  <div>{project.description}</div>
-                  <div className="space-x-4">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                />{" "}
+                <div className="h-[20%] p-2">{project.description}</div>
+                <div className="space-x-4">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button
+                      className={`bg-[#6d8a41] hover:bg-[#394b1e] py-4 px-8 rounded-lg font-bold text-lg mt-4 ${
+                        !project.demoUrl ? "cursor-not-allowed" : ""
+                      }`}
+                      disabled={!project.demoUrl}
                     >
-                      <button
-                        className={`bg-[#6d8a41] hover:bg-[#394b1e] py-4 px-8 rounded-lg font-bold text-lg mt-16 ${
-                          !project.demoUrl ? "cursor-not-allowed" : ""
-                        }`}
-                        disabled={!project.demoUrl}
-                      >
-                        <AiOutlineLink color="white" />
-                      </button>
-                    </a>
-                    <a
-                      href={project.gitUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      <AiOutlineLink color="white" />
+                    </button>
+                  </a>
+                  <a
+                    href={project.gitUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button
+                      className={`bg-[#6d8a41] hover:bg-[#394b1e] py-4 px-8 rounded-lg font-bold text-lg mt-4 ${
+                        !project.gitUrl ? "cursor-not-allowed" : ""
+                      }`}
+                      disabled={!project.gitUrl}
                     >
-                      <button
-                        className={`bg-[#6d8a41] hover:bg-[#394b1e] py-4 px-8 rounded-lg font-bold text-lg mt-16 ${
-                          !project.gitUrl ? "cursor-not-allowed" : ""
-                        }`}
-                        disabled={!project.gitUrl}
-                      >
-                        <AiFillGithub color="white" />
-                      </button>
-                    </a>
-                  </div>
+                      <AiFillGithub color="white" />
+                    </button>
+                  </a>
                 </div>
               </SwiperSlide>
             ))}
