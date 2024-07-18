@@ -142,7 +142,7 @@ const ContactSection = () => {
         <h2 className="pt-10 text-3xl md:text-5xl font-bold text-[#354719]">
           Contact me
         </h2>
-        <div className="w-screen flex flex-row justify-between">
+        <div className="w-screen mr-3 md:mr-0 flex flex-row justify-between">
           <div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
             {state.succeeded ? (
               <p className="text-[#748b4b] text-center">
@@ -202,7 +202,7 @@ const ContactSection = () => {
               </form>
             )}
           </div>
-          <div className="w-[35rem] h-[35rem] mr-20 pr-20 hidden md:block lg:block">
+          <div className="w-[35rem] h-[35rem] mr-20 pr-20 hidden">
             <img
               src={myPic}
               lt="Mubarak Odetunde"

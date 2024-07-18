@@ -29,6 +29,21 @@ export const projects = [
     gitUrl: "https://github.com/blackingg/threejs",
     image: "img/Customize-Shirt.png",
     description: "A 3d shirt customizing webapp",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "HTML + CSS",
+        level: 10,
+      },
+      {
+        title: "JavaScript",
+        level: 38,
+      },
+      {
+        title: "ReactJS",
+        level: 45,
+      },
+    ],
   },
   {
     index: 2,
@@ -37,6 +52,21 @@ export const projects = [
     gitUrl: "https://github.com/blackingg/pokemon_app",
     image: "img/Pokedex.png",
     description: "A Pokedex website",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "HTML + CSS",
+        level: 90,
+      },
+      {
+        title: "JavaScript",
+        level: 78,
+      },
+      {
+        title: "ReactJS",
+        level: 65,
+      },
+    ],
   },
   {
     index: 3,
@@ -46,6 +76,21 @@ export const projects = [
     image: "img/pizzaSite.png",
     description:
       "A little side project to for a Pizza resturant website (still in development).",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "HTML + CSS",
+        level: 50,
+      },
+      {
+        title: "JavaScript",
+        level: 82,
+      },
+      {
+        title: "ReactJS",
+        level: 15,
+      },
+    ],
   },
   {
     index: 4,
@@ -54,6 +99,21 @@ export const projects = [
     gitUrl: "https://github.com/blackingg/CanvasParticles",
     image: "img/particleCanvas.png",
     description: "A little sideproject to show a particle effect",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "HTML + CSS",
+        level: 90,
+      },
+      {
+        title: "JavaScript",
+        level: 78,
+      },
+      {
+        title: "ReactJS",
+        level: 65,
+      },
+    ],
   },
 ];
 
