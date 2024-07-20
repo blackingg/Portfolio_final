@@ -8,16 +8,33 @@ export const framerMotionConfig = {
 
 export const skills = [
   {
-    title: "HTML + CSS",
-    level: 90,
+    title: "HTML",
+    level: 87,
   },
   {
+    title: "CSS",
+    level: 90,
+  },
+
+  {
     title: "JavaScript",
-    level: 78,
+    level: 73,
+  },
+  {
+    title: "Tailwind CSS",
+    level: 90,
   },
   {
     title: "ReactJS",
     level: 65,
+  },
+  {
+    title: "Next.js",
+    level: 65,
+  },
+  {
+    title: "React Native",
+    level: 60,
   },
 ];
 

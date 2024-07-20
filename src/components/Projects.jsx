@@ -31,7 +31,7 @@ export default function Projects() {
             <div className=" blur-md bg-[#a1af8b] absolute z-10 flex flex-col shadow-lg p-12 rounded-lg">
               {projects[currentSlide].requiredSkills.map((skill, index) => (
                 <div
-                  className="w-64 md:w-96 flex flex-col"
+                  className="w-64 md:w-80 flex flex-col"
                   key={index}
                 >
                   <motion.h3
@@ -58,7 +58,7 @@ export default function Projects() {
             <div className="flex flex-col  bg-[#bedb93] relative z-20 border-solid border-2 border-[#bedb93] p-12 rounded-lg">
               {projects[currentSlide].requiredSkills.map((skill, index) => (
                 <div
-                  className="w-64 md:w-96 flex flex-col"
+                  className="w-64 md:w-80 flex flex-col"
                   key={index}
                 >
                   <motion.h3
@@ -100,7 +100,7 @@ export default function Projects() {
               }}
               navigation={true}
               modules={[EffectCoverflow, Navigation]}
-              className="-left-7 md:-left-10 w-[80%] lg:w-[70%] p-0 md:px-20 lg:px-24"
+              className="-left-7 md:-left-10 lg:-left-56 w-[80%] lg:w-[55%] p-0 md:px-20 lg:px-24"
               onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
             >
               {projects.map((project, index) => (

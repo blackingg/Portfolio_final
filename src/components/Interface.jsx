@@ -84,7 +84,7 @@ const AboutSection = () => {
           <p>
             Age:
             <br />
-            <span className="text-xl font-semibold">19</span>
+            <span className="text-xl font-semibold">20</span>
           </p>
           <p>
             From:
@@ -96,10 +96,10 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-[#354719]">
             Skills
           </h2>
-          <div className="mt-2 space-y-4">
-            {...skills.map((skill, index) => (
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-y-7 gap-x-16">
+            {skills.map((skill, index) => (
               <div
-                className="w-64 md:w-96 "
+                className="w-64 md:w-76"
                 key={index}
               >
                 <motion.h3
