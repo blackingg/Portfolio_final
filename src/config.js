@@ -72,16 +72,12 @@ export const projects = [
     requiredSkills: [
       {
         index: 1,
-        title: "HTML + CSS",
+        title: "Tailwind CSS",
         level: 90,
       },
       {
-        title: "JavaScript",
-        level: 78,
-      },
-      {
         title: "ReactJS",
-        level: 65,
+        level: 82,
       },
     ],
   },
@@ -96,16 +92,16 @@ export const projects = [
     requiredSkills: [
       {
         index: 1,
-        title: "HTML + CSS",
-        level: 50,
+        title: "Tailwind CSS",
+        level: 90,
       },
       {
-        title: "JavaScript",
-        level: 82,
+        title: "ThreeJS",
+        level: 77,
       },
       {
         title: "ReactJS",
-        level: 15,
+        level: 80,
       },
     ],
   },
@@ -119,8 +115,8 @@ export const projects = [
     requiredSkills: [
       {
         index: 1,
-        title: "HTML + CSS",
-        level: 90,
+        title: "Tailwind CSS",
+        level: 50,
       },
       {
         title: "JavaScript",
@@ -128,7 +124,7 @@ export const projects = [
       },
       {
         title: "ReactJS",
-        level: 65,
+        level: 75,
       },
     ],
   },

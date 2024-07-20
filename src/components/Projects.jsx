@@ -28,7 +28,7 @@ export default function Projects() {
       >
         <>
           <div className="hidden md:hidden lg:block">
-            <div className=" blur-md bg-[#a1af8b] absolute z-10 flex flex-col shadow-lg p-12 rounded-lg">
+            <div className="space-y-6 blur-md bg-[#a1af8b] absolute z-10 flex flex-col shadow-lg px-12 py-8 rounded-lg">
               {projects[currentSlide].requiredSkills.map((skill, index) => (
                 <div
                   className="w-64 md:w-80 flex flex-col"
@@ -55,7 +55,7 @@ export default function Projects() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col  bg-[#bedb93] relative z-20 border-solid border-2 border-[#bedb93] p-12 rounded-lg">
+            <div className="flex flex-col space-y-6 bg-[#bedb93] relative z-20 border-solid border-2 border-[#bedb93] px-12 py-8 rounded-lg">
               {projects[currentSlide].requiredSkills.map((skill, index) => (
                 <div
                   className="w-64 md:w-80 flex flex-col"
