@@ -4,7 +4,7 @@ import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { IoDocumentsOutline } from "react-icons/io5";
 
 export const Menu = (props) => {
-  const { onSectionChange, menuOpened, setMenuOpened, isLoading } = props;
+  const { onSectionChange, menuOpened, setMenuOpened } = props;
 
   return (
     <>

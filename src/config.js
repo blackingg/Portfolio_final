@@ -36,6 +36,10 @@ export const skills = [
     title: "React Native",
     level: 60,
   },
+  {
+    title: "GSAP",
+    level: 72,
+  },
 ];
 
 export const projects = [
