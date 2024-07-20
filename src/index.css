@@ -18,12 +18,38 @@ body {
   filter: invert(1);
 }
 
-.center-div {
-  width: 100%;
-  height: 100%;
-  background-color: lightblue;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+::selection {
+  background-color: #8b4b74;
+  color: #95e60a;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #cbdab4; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #748b4b; /* Background of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #76b30f; /* Background of the scrollbar thumb on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #748b4b #cbdab4; /* Thumb and track colors */
+}
+
+/* Additional styling for a specific element */
+.element {
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #748b4b #cbdab4; /* Thumb and track colors */
 }

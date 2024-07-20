@@ -79,24 +79,37 @@ const AboutSection = () => {
           <p>
             Name:
             <br />
-            <span className="text-xl font-semibold">Mubarak</span>
+            <span className="text-sm md:text-xl font-semibold">Mubarak</span>
           </p>
           <p>
             Age:
             <br />
-            <span className="text-xl font-semibold">20</span>
+            <span className="text-sm md:text-xl font-semibold">20</span>
           </p>
           <p>
             From:
             <br />
-            <span className="text-xl font-semibold">Nigeria</span>
+            <span className="text-sm md:text-xl font-semibold">Nigeria</span>
+          </p>
+        </div>
+        <div className="text-[#748b4b] text-base md:text-xl  mt-6">
+          <p>
+            Yo! My name is Mubarak, everyone calls me{" "}
+            <span className="font-semibold text-[#566b32] ">Black</span>.
+          </p>
+          <p className="mt-1">
+            I am passionate about creating digital content for the web. My
+            interest in web development and 3d was sparked in 2021. I was
+            fascinated by the idea of being able to create. Fast-forward to
+            today, I am building and also actively learning new ways to bring
+            both technologies together.
           </p>
         </div>
         <div className="mt-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#354719]">
+          <h2 className="text-xl md:text-5xl font-bold text-[#354719]">
             Skills
           </h2>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-y-7 gap-x-16">
+          <div className="mt-3 md:mt-6 grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-y-7 gap-x-16">
             {skills.map((skill, index) => (
               <div
                 className="w-64 md:w-76"
@@ -111,7 +124,7 @@ const AboutSection = () => {
                   {skill.title}
                 </motion.h3>
 
-                <div className="h-2 w-full bg-white rounded-full mt-2">
+                <div className="h-2 w-full bg-white rounded-full mt-1 md:mt-2">
                   <motion.div
                     className="h-full bg-[#71a71a] rounded-full"
                     style={{ width: `${skill.level}%` }}

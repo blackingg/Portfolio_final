@@ -49,7 +49,7 @@ export const projects = [
     requiredSkills: [
       {
         index: 1,
-        title: "HTML + CSS",
+        title: "Tailwind CSS",
         level: 10,
       },
       {
@@ -78,6 +78,14 @@ export const projects = [
       {
         title: "ReactJS",
         level: 82,
+      },
+      {
+        title: "PokéAPI",
+        level: 99,
+      },
+      {
+        title: "Express",
+        level: 70,
       },
     ],
   },
