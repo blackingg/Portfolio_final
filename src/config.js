@@ -95,10 +95,10 @@ export const projects = [
   },
   {
     index: 3,
-    title: "A Pizza website",
-    demoUrl: "https://pizzahut-blackingg.netlify.app/",
+    title: "A Breakfast Resturant webapp",
+    demoUrl: "https://thebreakfastplace-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/resturant_webapp",
-    image: "img/pizzaSite.png",
+    image: "img/thebreakfastplace.png",
     description:
       "A little side project to for a Pizza resturant website (still in development).",
     requiredSkills: [
