@@ -37,6 +37,10 @@ export const skills = [
     level: 60,
   },
   {
+    title: "ThreeJS",
+    level: 65,
+  },
+  {
     title: "GSAP",
     level: 72,
   },
