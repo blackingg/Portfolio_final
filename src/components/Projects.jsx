@@ -51,7 +51,7 @@ export default function Projects() {
                 >
                   <div
                     className={`absolute inset-0 bg-cover bg-center ${
-                      position === 0 ? "blur-xl" : "blur-none"
+                      position === 0 ? "blur-3xl" : "blur-none"
                     }`}
                     style={{
                       backgroundImage: `url(${project.image})`,
@@ -62,7 +62,7 @@ export default function Projects() {
                       position === 0 ? "block" : "hidden"
                     }`}
                   >
-                    <div className="w-32 md:w-64 h-max text-[#354719] text-left absolute z-50">
+                    <div className="w-32 md:w-64 h-max text-[#83a34f] text-left absolute z-50">
                       <p className="text-2xl font-black">{project.title}</p>
                       <p className="mt-5 text-lg font-bold">
                         {project.description}
@@ -75,7 +75,7 @@ export default function Projects() {
                               key={index}
                             >
                               <motion.h3
-                                className="text-sm md:text-xl font-bold text-gray-800"
+                                className="text-sm md:text-xl font-bold text-[#69863b]"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{
