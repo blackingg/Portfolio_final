@@ -58,15 +58,15 @@ export const projects = [
       {
         index: 1,
         title: "Tailwind CSS",
-        level: 10,
+        level: 30,
       },
       {
         title: "JavaScript",
-        level: 38,
+        level: 75,
       },
       {
         title: "ReactJS",
-        level: 45,
+        level: 75,
       },
     ],
   },
@@ -75,7 +75,7 @@ export const projects = [
     title: "Pokedex",
     demoUrl: "https://pokedex-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/pokemon_app",
-    image: "img/Pokedex.png",
+    image: "img/pokedexMobile.jpg",
     description: "A Pokedex website",
     requiredSkills: [
       {
@@ -102,9 +102,8 @@ export const projects = [
     title: "A Breakfast Resturant webapp",
     demoUrl: "https://thebreakfastplace-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/resturant_webapp",
-    image: "img/thebreakfastplace.png",
-    description:
-      "A little side project to for a Pizza resturant website (still in development).",
+    image: "img/thebreakfastplaceMobile.jpg",
+    description: "A breakfast resturant website.",
     requiredSkills: [
       {
         index: 1,

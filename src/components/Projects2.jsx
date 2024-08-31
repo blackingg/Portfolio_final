@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { motion } from "framer-motion";
 
-export default function Projects() {
+export default function Projects2() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNext = () => {
