@@ -34,12 +34,12 @@ export default function Projects() {
                     position === 0
                       ? "top-0 left-0 translate-x-0 translate-y-0 h-full w-full"
                       : "w-[200px] h-[300px] top-1/2 -translate-y-1/2 z-20"
-                  } ${position === 1 || position === 2 ? "hidden" : ""} ${
+                  } ${position === 1 ? "hidden" : ""} ${
                     position === 1 ? "z-20" : ""
-                  } ${position === 2 ? "" : ""} ${
-                    position === 3 ? "left-1/2" : ""
-                  } ${position === 4 ? "left-[calc(50%+20px)] " : ""} ${
-                    position >= 5 ? "left-[calc(50%+20px)]" : ""
+                  } ${position === 2 ? "left-1/2" : ""} ${
+                    position === 3 ? "left-[calc(50%+220px)]" : ""
+                  } ${position === 4 ? "left-[calc(50%+440px)] " : ""} ${
+                    position >= 5 ? "left-[calc(50%+660px)]" : ""
                   }`}
                 >
                   <div
@@ -47,7 +47,10 @@ export default function Projects() {
                       position === 0 ? "blur-3xl" : "blur-none"
                     }`}
                     style={{
-                      backgroundImage: `url(${projects[currentSlide].image})`,
+                      backgroundImage:
+                        position === 0 || position === 1 || position === 2
+                          ? `url(${projects[currentSlide].image})`
+                          : `url(${project.image})`,
                     }}
                   />
                   <div
