@@ -2,6 +2,7 @@ import { projects } from "../config";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 import { useState } from "react";
+
 import { motion } from "framer-motion";
 
 export default function Projects() {
@@ -21,7 +22,7 @@ export default function Projects() {
         <h2 className="text-4xl md:text-5xl font-bold text-[#354719] mt-8">
           Projects
         </h2>
-        <div className="relative w-full h-[600px] rounded-2xl p-12 mx-auto shadow-xl">
+        <div className="relative w-full h-[600px] p-12 rounded-2xl mx-auto shadow-xl">
           <div className="w-max mt-12">
             {projects.map((project, index) => {
               const position =
@@ -34,12 +35,10 @@ export default function Projects() {
                     position === 0
                       ? "top-0 left-0 translate-x-0 translate-y-0 h-full w-full"
                       : "w-[200px] h-[300px] top-1/2 -translate-y-1/2 z-20"
-                  } ${position === 1 || position === 2 ? "hidden" : ""} ${
-                    position === 1 ? "z-20" : ""
-                  } ${position === 2 ? "" : ""} ${
-                    position === 3 ? "left-1/2" : ""
-                  } ${position === 4 ? "left-[calc(50%+20px)] " : ""} ${
-                    position >= 5 ? "left-[calc(50%+20px)]" : ""
+                  } ${position === 1 ? "left-1/2 z-20" : ""} ${
+                    position === 2 ? "left-[calc(50%+220px)]" : ""
+                  } ${position === 3 ? "left-[calc(50%+440px)]" : ""} ${
+                    position >= 4 ? "left-[calc(50%+660px)]" : ""
                   }`}
                 >
                   <div
@@ -47,7 +46,7 @@ export default function Projects() {
                       position === 0 ? "blur-3xl" : "blur-none"
                     }`}
                     style={{
-                      backgroundImage: `url(${projects[currentSlide].image})`,
+                      backgroundImage: `url(${project.image})`,
                     }}
                   />
                   <div
@@ -56,11 +55,9 @@ export default function Projects() {
                     }`}
                   >
                     <div className="w-32 md:w-64 h-max text-[#83a34f] text-left absolute z-50">
-                      <p className="text-2xl font-black">
-                        {projects[currentSlide].title}
-                      </p>
+                      <p className="text-2xl font-black">{project.title}</p>
                       <p className="mt-5 text-lg font-bold">
-                        {projects[currentSlide].description}
+                        {project.description}
                       </p>
                       <p className="mt-5 gap-x-16 gap-y-5 grid grid-cols-1 md:grid-cols-2">
                         {projects[currentSlide].requiredSkills.map(
@@ -100,33 +97,29 @@ export default function Projects() {
                       <p className="">
                         <div className="space-x-4">
                           <a
-                            href={projects[currentSlide].demoUrl}
+                            href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             <button
                               className={`bg-[#6d8a41] hover:bg-[#394b1e] p-3 rounded-full font-bold text-lg mt-4 ${
-                                !projects[currentSlide].demoUrl
-                                  ? "cursor-not-allowed"
-                                  : ""
+                                !project.demoUrl ? "cursor-not-allowed" : ""
                               }`}
-                              disabled={!projects[currentSlide].demoUrl}
+                              disabled={!project.demoUrl}
                             >
                               <AiOutlineLink color="white" />
                             </button>
                           </a>
                           <a
-                            href={projects[currentSlide].gitUrl}
+                            href={project.gitUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             <button
                               className={`bg-[#6d8a41] hover:bg-[#394b1e] p-3 rounded-full font-bold text-lg mt-4 ${
-                                !projects[currentSlide].gitUrl
-                                  ? "cursor-not-allowed"
-                                  : ""
+                                !project.gitUrl ? "cursor-not-allowed" : ""
                               }`}
-                              disabled={!projects[currentSlide].gitUrl}
+                              disabled={!project.gitUrl}
                             >
                               <AiFillGithub color="white" />
                             </button>
