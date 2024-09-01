@@ -34,19 +34,11 @@ export default function Projects() {
                   className={`absolute overflow-hidden z-10 rounded-2xl bg-fit inline-block transition-all bg-cover shadow-xl ${
                     position === 0
                       ? "top-0 left-0 translate-x-0 translate-y-0 h-full w-full"
-                      : "w-[200px] h-[300px] top-1/2 -translate-y-1/2"
-                  } ${position === 1 ? "left-1/2" : ""} ${
-                    position === 2
-                      ? "left-[calc(50%+220px)] w-[200px] h-[300px]"
-                      : ""
-                  } ${
-                    position === 3
-                      ? "left-[calc(50%+440px)] w-[200px] h-[300px]"
-                      : ""
-                  } ${
-                    position >= 4
-                      ? "left-[calc(50%+660px)] w-[200px] h-[300px]"
-                      : ""
+                      : "w-[200px] h-[300px] top-1/2 -translate-y-1/2 z-20"
+                  } ${position === 1 ? "left-1/2 z-20" : ""} ${
+                    position === 2 ? "left-[calc(50%+220px)]" : ""
+                  } ${position === 3 ? "left-[calc(50%+440px)]" : ""} ${
+                    position >= 4 ? "left-[calc(50%+660px)]" : ""
                   }`}
                 >
                   <div
