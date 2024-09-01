@@ -52,7 +52,7 @@ export const projects = [
     title: "Customize a Shirt",
     demoUrl: "https://customize-shirt.netlify.app/",
     gitUrl: "https://github.com/blackingg/threejs",
-    image: "img/Customize-Shirt.png",
+    image: "img/customizeShirtMobile.jpg",
     description: "A 3d shirt customizing webapp",
     requiredSkills: [
       {
