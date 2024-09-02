@@ -69,7 +69,7 @@ export const Menu = (props) => {
           </a>
           <a
             className="socials"
-            href="https://docs.google.com/document/d/1JiO-CTKuXNfPQPGrYdU36aRz8IlDS_W8/edit?usp=sharing&ouid=114443613482269808982&rtpof=true&sd=true"
+            href="Mubarak-Odetunde-Resume.pdf"
             target="_blank"
           >
             <IoDocumentsOutline className=" hover:text-[#436112] transition-colors" />

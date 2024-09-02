@@ -34,13 +34,11 @@ export default function Projects() {
                     position === 0
                       ? "top-0 left-0 translate-x-0 translate-y-0 h-full w-full"
                       : "w-[200px] h-[300px] top-1/2 -translate-y-1/2 z-20"
-                  } ${position === 1 ? "hidden" : ""} ${
-                    position === 1 ? "z-20" : ""
-                  } ${position === 2 ? "left-1/2" : ""} ${
-                    position === 3 ? "left-[calc(50%+220px)]" : ""
-                  } ${position === 4 ? "left-[calc(50%+440px)] " : ""} ${
-                    position >= 5 ? "left-[calc(50%+660px)]" : ""
-                  }`}
+                  } ${position === 1 ? "hidden" : ""}${
+                    position === 2 ? "left-1/2" : ""
+                  } ${position === 3 ? "left-[calc(50%+220px)]" : ""} ${
+                    position === 4 ? "left-[calc(50%+440px)] " : ""
+                  } ${position >= 5 ? "left-[calc(50%+660px)]" : ""}`}
                 >
                   <div
                     className={`absolute inset-0 bg-cover bg-center ${
@@ -65,14 +63,14 @@ export default function Projects() {
                       <p className="mt-5 text-lg font-bold">
                         {projects[currentSlide].description}
                       </p>
-                      <p className="mt-5 gap-x-16 gap-y-5 grid grid-cols-1 md:grid-cols-2">
+                      <div className="mt-5 gap-x-16 gap-y-5 grid grid-cols-1 md:grid-cols-2">
                         {projects[currentSlide].requiredSkills.map(
                           (skill, index) => (
                             <div
                               className="w-44 md:w-32 flex flex-col"
                               key={index}
                             >
-                              <motion.h3
+                              <motion.div
                                 className="text-sm md:text-xl font-bold text-[#69863b]"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
@@ -82,8 +80,7 @@ export default function Projects() {
                                 }}
                               >
                                 {skill.title}
-                              </motion.h3>
-
+                              </motion.div>
                               <div className="h-2 w-2/3 md:w-full bg-white rounded-full mt-0 md:mt-2">
                                 <motion.div
                                   className="h-full bg-[#71a71a] rounded-full border-solid border-2 "
@@ -99,43 +96,41 @@ export default function Projects() {
                             </div>
                           )
                         )}
-                      </p>
-                      <p className="">
-                        <div className="space-x-4">
-                          <a
-                            href={projects[currentSlide].demoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                      </div>
+                      <div className="space-x-4">
+                        <a
+                          href={projects[currentSlide].demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button
+                            className={`bg-[#6d8a41] hover:bg-[#394b1e] p-3 rounded-full font-bold text-lg mt-4 ${
+                              !projects[currentSlide].demoUrl
+                                ? "cursor-not-allowed"
+                                : ""
+                            }`}
+                            disabled={!projects[currentSlide].demoUrl}
                           >
-                            <button
-                              className={`bg-[#6d8a41] hover:bg-[#394b1e] p-3 rounded-full font-bold text-lg mt-4 ${
-                                !projects[currentSlide].demoUrl
-                                  ? "cursor-not-allowed"
-                                  : ""
-                              }`}
-                              disabled={!projects[currentSlide].demoUrl}
-                            >
-                              <AiOutlineLink color="white" />
-                            </button>
-                          </a>
-                          <a
-                            href={projects[currentSlide].gitUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            <AiOutlineLink color="white" />
+                          </button>
+                        </a>
+                        <a
+                          href={projects[currentSlide].gitUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button
+                            className={`bg-[#6d8a41] hover:bg-[#394b1e] p-3 rounded-full font-bold text-lg mt-4 ${
+                              !projects[currentSlide].gitUrl
+                                ? "cursor-not-allowed"
+                                : ""
+                            }`}
+                            disabled={!projects[currentSlide].gitUrl}
                           >
-                            <button
-                              className={`bg-[#6d8a41] hover:bg-[#394b1e] p-3 rounded-full font-bold text-lg mt-4 ${
-                                !projects[currentSlide].gitUrl
-                                  ? "cursor-not-allowed"
-                                  : ""
-                              }`}
-                              disabled={!projects[currentSlide].gitUrl}
-                            >
-                              <AiFillGithub color="white" />
-                            </button>
-                          </a>
-                        </div>
-                      </p>
+                            <AiFillGithub color="white" />
+                          </button>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

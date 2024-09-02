@@ -164,7 +164,7 @@ const ContactSection = () => {
             ) : (
               <form onSubmit={handleSubmit}>
                 <label
-                  for="name"
+                  htmlFor="name"
                   className="font-medium text-[#748b4b] block mb-1"
                 >
                   Name:
@@ -176,7 +176,7 @@ const ContactSection = () => {
                   className="bg-gray-100 p-3 block w-full rounded-md border-0 text-[#354719] shadow-sm  focus:outline-gray-300 "
                 />
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="font-medium text-[#748b4b] block mb-1 mt-3"
                 >
                   Email:
@@ -192,7 +192,7 @@ const ContactSection = () => {
                   errors={state.errors}
                 />
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="font-medium text-[#748b4b] block mb-1 mt-8"
                 >
                   Message:
