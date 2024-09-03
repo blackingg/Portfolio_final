@@ -236,7 +236,7 @@ const CommentSection = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 80 }}
       >
-        <div className="h-fit w-screen flex  mx-5 p-8 ">
+        <div className="absolute left-0 h-fit w-screen flex p-2">
           <Marquee>
             {comments.map((comment, index) => (
               <div
