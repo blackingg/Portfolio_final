@@ -34,21 +34,24 @@ export default function Projects() {
                     position === 0
                       ? "top-0 left-0 translate-x-0 translate-y-0 h-full w-full"
                       : "w-[200px] h-[300px] top-1/2 -translate-y-1/2 z-20"
-                  } ${position === 1 ? "hidden" : ""}${
-                    position === 2 ? "left-1/2" : ""
-                  } ${position === 3 ? "left-[calc(50%+220px)]" : ""} ${
-                    position === 4 ? "left-[calc(50%+440px)] " : ""
-                  } ${position >= 5 ? "left-[calc(50%+660px)]" : ""}`}
+                  } ${position === 1 ? "left-1/2" : ""}${
+                    position === 2 ? "left-[calc(50%+220px)]" : ""
+                  } ${position === 3 ? "left-[calc(50%+440px)]" : ""} ${
+                    position === 4 ? "left-[calc(50%+660px)]" : ""
+                  } ${position >= 5 ? "hidden" : ""}`}
                 >
                   <div
                     className={`absolute inset-0 bg-cover bg-center ${
                       position === 0 ? "blur-3xl" : "blur-none"
                     }`}
                     style={{
-                      backgroundImage:
-                        position === 0 || position === 1 || position === 2
-                          ? `url(${projects[currentSlide].image})`
-                          : `url(${project.image})`,
+                      backgroundImage: `url(${
+                        position === 0 || position === 1
+                          ? projects[currentSlide].image
+                          : projects[
+                              (currentSlide + (position - 1)) % projects.length
+                            ].image
+                      })`,
                     }}
                   />
                   <div
