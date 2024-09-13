@@ -143,6 +143,29 @@ export const projects = [
       },
     ],
   },
+  {
+    index: 5,
+    title: "Iphone color picker",
+    demoUrl: "https://iphone-blackingg.netlify.app",
+    gitUrl: "https://github.com/blackingg/iphone",
+    image: "img/iphoneMobile.jpg",
+    description: "See different possible color of the iphone 14 on a 3d asset",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "Tailwind CSS",
+        level: 90,
+      },
+      {
+        title: "ThreeJs",
+        level: 85,
+      },
+      {
+        title: "ReactJS",
+        level: 85,
+      },
+    ],
+  },
 ];
 
 export const comments = [
