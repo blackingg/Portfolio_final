@@ -49,24 +49,24 @@ export const skills = [
 export const projects = [
   {
     index: 1,
-    title: "Customize a Shirt",
-    demoUrl: "https://customize-shirt.netlify.app/",
-    gitUrl: "https://github.com/blackingg/threejs",
-    image: "img/customizeShirtMobile.jpg",
-    description: "A 3d shirt customizing webapp",
+    title: "A Breakfast Resturant webapp",
+    demoUrl: "https://thebreakfastplace-blackingg.netlify.app/",
+    gitUrl: "https://github.com/blackingg/resturant_webapp",
+    image: "img/thebreakfastplaceMobile.jpg",
+    description: "A breakfast resturant website.",
     requiredSkills: [
       {
         index: 1,
         title: "Tailwind CSS",
-        level: 30,
+        level: 90,
       },
       {
-        title: "JavaScript",
-        level: 75,
+        title: "ThreeJS",
+        level: 77,
       },
       {
         title: "ReactJS",
-        level: 75,
+        level: 80,
       },
     ],
   },
@@ -97,13 +97,14 @@ export const projects = [
       },
     ],
   },
+
   {
     index: 3,
-    title: "A Breakfast Resturant webapp",
-    demoUrl: "https://thebreakfastplace-blackingg.netlify.app/",
-    gitUrl: "https://github.com/blackingg/resturant_webapp",
-    image: "img/thebreakfastplaceMobile.jpg",
-    description: "A breakfast resturant website.",
+    title: "Iphone color picker",
+    demoUrl: "https://iphone-blackingg.netlify.app",
+    gitUrl: "https://github.com/blackingg/iphone",
+    image: "img/iphoneMobile.jpg",
+    description: "See different possible color of the iphone 14 on a 3d asset",
     requiredSkills: [
       {
         index: 1,
@@ -111,12 +112,12 @@ export const projects = [
         level: 90,
       },
       {
-        title: "ThreeJS",
-        level: 77,
+        title: "ThreeJs",
+        level: 85,
       },
       {
         title: "ReactJS",
-        level: 80,
+        level: 85,
       },
     ],
   },
@@ -143,26 +144,27 @@ export const projects = [
       },
     ],
   },
+
   {
     index: 5,
-    title: "Iphone color picker",
-    demoUrl: "https://iphone-blackingg.netlify.app",
-    gitUrl: "https://github.com/blackingg/iphone",
-    image: "img/iphoneMobile.jpg",
-    description: "See different possible color of the iphone 14 on a 3d asset",
+    title: "Customize a Shirt",
+    demoUrl: "https://customize-shirt.netlify.app/",
+    gitUrl: "https://github.com/blackingg/threejs",
+    image: "img/customizeShirtMobile.jpg",
+    description: "A 3d shirt customizing webapp",
     requiredSkills: [
       {
         index: 1,
         title: "Tailwind CSS",
-        level: 90,
+        level: 30,
       },
       {
-        title: "ThreeJs",
-        level: 85,
+        title: "JavaScript",
+        level: 75,
       },
       {
         title: "ReactJS",
-        level: 85,
+        level: 75,
       },
     ],
   },
