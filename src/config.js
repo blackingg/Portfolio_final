@@ -50,7 +50,7 @@ export const projects = [
   {
     index: 1,
     title: "A Breakfast Resturant webapp",
-    demoUrl: "https://thebreakfastplace-blackingg.netlify.app/",
+    demoUrl: "https://breakfastplace-blackingg.vercel.app",
     gitUrl: "https://github.com/blackingg/resturant_webapp",
     image: "img/thebreakfastplaceMobile.jpg",
     description: "A breakfast resturant website.",
