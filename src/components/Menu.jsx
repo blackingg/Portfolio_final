@@ -69,7 +69,7 @@ export const Menu = (props) => {
           </a>
           <a
             className="socials"
-            href="Mubarak-Odetunde-Resume.pdf"
+            href="https://flowcv.com/resume/1u1qd2vnw7"
             target="_blank"
           >
             <IoDocumentsOutline className=" hover:text-[#436112] transition-colors" />
