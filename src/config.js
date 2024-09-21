@@ -97,7 +97,6 @@ export const projects = [
       },
     ],
   },
-
   {
     index: 3,
     title: "Iphone color picker",
@@ -123,6 +122,30 @@ export const projects = [
   },
   {
     index: 4,
+    title: "Geeky Medics Website Remake",
+    demoUrl: "https://medinfo-blackingg.vercel.app",
+    gitUrl: "https://github.com/blackingg/medWeb",
+    image: "img/medInfoMobile.jpg",
+    description:
+      "A remake of the Geeky Medics website with some demo data from their site",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "Tailwind CSS",
+        level: 90,
+      },
+      {
+        title: "JavaScript",
+        level: 85,
+      },
+      {
+        title: "ReactJS",
+        level: 85,
+      },
+    ],
+  },
+  {
+    index: 5,
     title: "Particle Canvas",
     demoUrl: "https://particleeffect-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/CanvasParticles",
@@ -146,7 +169,7 @@ export const projects = [
   },
 
   {
-    index: 5,
+    index: 6,
     title: "Customize a Shirt",
     demoUrl: "https://customize-shirt.netlify.app/",
     gitUrl: "https://github.com/blackingg/threejs",
