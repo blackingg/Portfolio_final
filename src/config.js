@@ -146,6 +146,30 @@ export const projects = [
   },
   {
     index: 5,
+    title: "Artist portfolio page",
+    demoUrl: "https://dafash.vercel.app",
+    gitUrl: "",
+    image: "img/daFash.jpg",
+    description:
+      "A portfolio page for an artist with a radio and a contact form",
+    requiredSkills: [
+      {
+        index: 1,
+        title: "Tailwind CSS",
+        level: 90,
+      },
+      {
+        title: "JavaScript",
+        level: 85,
+      },
+      {
+        title: "ReactJS",
+        level: 85,
+      },
+    ],
+  },
+  {
+    index: 6,
     title: "Particle Canvas",
     demoUrl: "https://particleeffect-blackingg.netlify.app/",
     gitUrl: "https://github.com/blackingg/CanvasParticles",
