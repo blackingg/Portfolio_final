@@ -73,8 +73,8 @@ export const projects = [
   {
     index: 2,
     title: "Pokedex",
-    demoUrl: "https://pokedex-blackingg.netlify.app/",
-    gitUrl: "https://github.com/blackingg/pokemon_app",
+    demoUrl: "https://pokedex-blackingg.vercel.app",
+    gitUrl: "https://github.com/blackingg/pokedex",
     image: "img/pokedexMobile.jpg",
     description: "A Pokedex website",
     requiredSkills: [
