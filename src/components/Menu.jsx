@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { IoDocumentsOutline } from "react-icons/io5";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const Menu = (props) => {
   const { onSectionChange, menuOpened, setMenuOpened } = props;
@@ -66,6 +67,13 @@ export const Menu = (props) => {
             target="_blank"
           >
             <AiFillLinkedin className=" hover:text-[#436112] transition-colors" />
+          </a>
+          <a
+            className="socials"
+            href="https://x.com/mubarakOdetunde"
+            target="_blank"
+          >
+            <FaXTwitter className=" hover:text-[#436112] transition-colors" />
           </a>
           <a
             className="socials"
