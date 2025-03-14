@@ -82,11 +82,6 @@ const AboutSection = () => {
             <span className="text-sm md:text-xl font-semibold">Mubarak</span>
           </p>
           <p>
-            Age:
-            <br />
-            <span className="text-sm md:text-xl font-semibold">20</span>
-          </p>
-          <p>
             From:
             <br />
             <span className="text-sm md:text-xl font-semibold">Nigeria</span>
